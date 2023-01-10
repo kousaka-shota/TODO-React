@@ -7,8 +7,8 @@ const App = () => {
   return (
     <>
       <h1 style={{ color: "red" }}>こんにちは</h1>
-      <ColorfullMessage color="blue" message="お元気ですか" />
-      <ColorfullMessage color="pink" message="元気です" />
+      <ColorfullMessage color="blue">お元気ですか</ColorfullMessage>
+      <ColorfullMessage color="pink">元気です</ColorfullMessage>
       <button onClick={onClickButton}>ボタン</button>
     </>
   );
