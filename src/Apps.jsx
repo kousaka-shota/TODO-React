@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import ColorfullMessage from "./components/ColorfullMessage";
 
 const App = () => {
+  //usestateで定義した変数は値が変化すると再レンダリングされる、
+  //setNumはnumを書き換えるための関数として使用
   const [num, setNum] = useState(0);
   const [faceShowFlag, setFaceShowFlag] = useState(false);
 
@@ -12,7 +14,8 @@ const App = () => {
     setFaceShowFlag(!faceShowFlag);
   };
 
-  //[]にすると初回のレンダリングだけで実行したい風にできる,[num]にするとnumの値が変わったら通る処理
+  //[]にすると初回のレンダリングだけで実行したい風にできる,
+  //[num]にするとnumの値が変わったら通る処理にできる
   useEffect(() => {
     if (num > 0) {
       if (num % 3 === 0) {
